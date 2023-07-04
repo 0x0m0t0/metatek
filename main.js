@@ -1,5 +1,7 @@
 import './main.scss';
+import { test } from './test.ts';
 
+test();
 const fetchy = async (callback) => {
   let progData;
   await fetch('./json/cine.json', {
