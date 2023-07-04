@@ -1,5 +1,7 @@
 #
 config.js
+exclude
+
 # Logs
 logs
 *.log
