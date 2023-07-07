@@ -1,7 +1,7 @@
 import './main.scss';
-import { test } from './test.ts';
+import './test.ts';
+import { DateTime } from 'luxon';
 
-test();
 const fetchy = async (callback) => {
   let progData;
   await fetch('./json/cine.json', {
@@ -33,8 +33,6 @@ let mainpart = document.querySelector('main');
 mainpart.append(section);
 mainpart.append(sectionView);
 const cineProg = (movie) => {
-  const main = document.querySelector('main');
-
   const section = document.querySelector('section');
   let movieCard = document.createElement('div');
   movieCard.setAttribute('class', 'movie-card');

@@ -1,6 +1,5 @@
 import puppeteer from 'puppeteer';
 
-import { Browser } from 'puppeteer';
 import fs from 'fs';
 
 console.log('test');
@@ -27,10 +26,13 @@ const main = async () => {
       time: film.querySelector(
         'div.col-12.col-md-2.d-flex.justify-content-between.flex-md-column.flex-row.align-self-center h4.screening__time',
       ).innerText,
-
+      date: film.getAttribute('data-date'),
+      piano: film.getAttribute('data-piano'),
       location: film.querySelector(
         'div.col-12.col-md-2.d-flex.justify-content-between.flex-md-column.flex-row.align-self-center p span.badge.icon.screening__location',
       ).innerText,
+      details: film.querySelector('.small').innerText,
+      director: film.$('.film__directors').innerText,
     }));
     return data;
   });
