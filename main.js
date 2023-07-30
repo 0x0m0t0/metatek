@@ -1,5 +1,7 @@
 import './main.scss';
-import './test.ts';
+// import './test';
+// import './manip';
+// import './date.js';
 import { DateTime } from 'luxon';
 
 const fetchy = async (callback) => {
@@ -25,6 +27,8 @@ const fetchy = async (callback) => {
 };
 
 ////
+
+
 
 let section = document.createElement('section');
 let sectionView = document.createElement('section');
@@ -92,9 +96,8 @@ const cineProg = (movie) => {
 
   section.append(movieCard);
 
-  filmImg.style = 'width:100%; auto: 100%;';
   topCard.style = 'display:flex';
-  section.style = 'display:flex; flex-flow:row wrap';
+
   movieCard.style = 'display:flex;flex-flow:column wrap;';
 };
 
